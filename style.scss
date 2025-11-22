@@ -227,8 +227,8 @@ h1 {
   background: #eee;
 }
 
-/* Visible by default (prevents flash if JS/CSS load order is weird) */
-.cake-shot {
+/* Visible by default */
+.gallery .cake-shot {
   opacity: 1;
   transform: none;
   transition: opacity 1.6s cubic-bezier(.22,.61,.36,1),
@@ -236,22 +236,21 @@ h1 {
   will-change: opacity, transform;
 }
 
-/* Once JS is ready, start them hidden until revealed */
-.reveal-ready .cake-shot {
+/* Hide only gallery images once JS is ready */
+.reveal-ready .gallery .cake-shot {
   opacity: 0;
   transform: translateY(8px);
 }
 
-/* When revealed */
-.cake-shot.is-visible {
+/* Revealed state */
+.gallery .cake-shot.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .cake-shot,
-  .reveal-ready .cake-shot {
+  .gallery .cake-shot,
+  .reveal-ready .gallery .cake-shot {
     opacity: 1;
     transform: none;
     transition: none;
