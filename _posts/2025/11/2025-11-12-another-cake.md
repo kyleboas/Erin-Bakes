@@ -8,3 +8,5 @@ image: "https://raw.githubusercontent.com/kyleboas/Erin-Bakes/refs/heads/main/up
 Oh my god, cupcakes. How precious.
 
 <!---more--->
+
+Ingredients 
