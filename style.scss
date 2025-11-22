@@ -51,8 +51,19 @@ body {
 }
 
 /* LEFT COLUMN */
-.profile {
-  grid-template-rows: auto auto;
+.profile{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar{
+  flex: 0 0 60px;
+}
+
+.profile-text{
+  display: flex;
+  flex-direction: column;
 }
 
 .avatar {
@@ -96,6 +107,8 @@ body {
   letter-spacing: 1px;
   color: #404040;
   text-transform: uppercase;
+  grid-column: auto;
+  margin-top: 2px;
 }
 
 .blurb {
