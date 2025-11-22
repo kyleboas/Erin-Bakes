@@ -628,4 +628,55 @@ h1 {
 .footer a {
   text-decoration: none;
   color: var(--muted);
-} 
+}
+
+/* === Sidebar layout above 760px === */
+@media (min-width: 760px) {
+  .page {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr); /* sidebar | main */
+    gap: 28px;
+    align-items: start;
+    padding: 48px 28px 0; /* keep your top spacing */
+  }
+
+  /* Sidebar */
+  .top {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 0;          /* sidebar inherits page padding */
+    position: sticky;    /* optional: keeps sidebar visible while scrolling */
+    top: 24px;
+  }
+
+  /* kill the old two-col intent inside .top */
+  .top > .left,
+  .top > .contact {
+    grid-column: auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .top > .contact {
+    align-self: stretch;
+  }
+
+  /* Everything else in main column */
+  .page > :not(.top) {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+  /* Let posts use the full main width */
+  .post-content {
+    padding: 20px 0 120px; /* remove side padding so it spans cleanly */
+    max-width: none;
+  }
+
+  .gallery,
+  .footer {
+    margin-left: 0; /* prevent sidebar-style offsets */
+  }
+}
