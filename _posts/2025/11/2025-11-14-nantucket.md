@@ -1,0 +1,15 @@
+---
+layout: post
+date: 2025-11-21 11:00 UTC
+title: "Nantucket"
+categories:
+- "Travel"
+tags:
+- "Nantucket"
+image: "https://raw.githubusercontent.com/kyleboas/Erin-Bakes/refs/heads/main/uploads/2025/11/IMG_9998.jpeg"
+---
+
+I'm on a bike in beautiful Nantucket. Totally not going to fall into a muddy area.
+
+<!---more--->
+
