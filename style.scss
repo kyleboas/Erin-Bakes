@@ -301,6 +301,113 @@ body {
   color: #fff;
 }
 
+/* ---- Message modal ---- */
+.message-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.message-modal.is-open {
+  display: flex;
+}
+
+.message-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+}
+
+.message-modal__panel {
+  position: relative;
+  width: min(720px, 94vw);
+  height: min(60vh, 560px);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+}
+
+.message-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.message-modal__title {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+.message-modal__close {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.message-modal__close:hover {
+  background: #f3f3f3;
+}
+
+.message-modal__textarea {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  border: 0;
+  outline: none;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 12px 6px;
+}
+
+.message-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule);
+}
+
+.message-modal__send {
+  appearance: none;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.message-modal__send:hover {
+  opacity: 0.9;
+}
+
+/* stop background scroll when modal open */
+body.modal-open {
+  overflow: hidden;
+}
+
 /* === SUBSCRIBE FORM (scoped + centered) === */
 
 .subscribe {

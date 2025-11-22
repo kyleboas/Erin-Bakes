@@ -100,5 +100,94 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const messageInput = document.getElementById("message");
+  const modal = document.getElementById("messageModal");
+  const modalText = document.getElementById("messageModalText");
+  const sendBtn = document.getElementById("messageModalSend");
+  const closeEls = modal ? modal.querySelectorAll("[data-close]") : [];
+  let lastFocused = null;
+
+  if (!messageInput || !modal) return;
+
+  function openModal() {
+    lastFocused = document.activeElement;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+
+    modalText.value = messageInput.value || "";
+    modalText.focus();
+    modalText.setSelectionRange(modalText.value.length, modalText.value.length);
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+    if (lastFocused) lastFocused.focus();
+  }
+
+  // Open on click or focus
+  messageInput.addEventListener("focus", (e) => {
+    e.preventDefault();
+    openModal();
+  });
+  messageInput.addEventListener("click", (e) => {
+    e.preventDefault();
+    openModal();
+  });
+
+  // Close buttons / backdrop
+  closeEls.forEach(el => el.addEventListener("click", closeModal));
+
+  // Esc closes
+  document.addEventListener("keydown", (e) => {
+    if (modal.classList.contains("is-open") && e.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  // Send copies value back + submits form
+  sendBtn.addEventListener("click", () => {
+    messageInput.value = modalText.value.trim();
+    closeModal();
+
+    const form = messageInput.closest("form");
+    if (form && messageInput.value) {
+      if (form.requestSubmit) form.requestSubmit();
+      else form.submit();
+    }
+  });
+});
+</script>
+
+<!-- Message modal (add once near end of body) -->
+<div class="message-modal" id="messageModal" aria-hidden="true">
+  <div class="message-modal__backdrop" data-close></div>
+
+  <div class="message-modal__panel"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="messageModalTitle">
+    <div class="message-modal__header">
+      <h2 id="messageModalTitle" class="message-modal__title">Message</h2>
+      <button type="button" class="message-modal__close" aria-label="Close" data-close>
+        ✕
+      </button>
+    </div>
+
+    <textarea id="messageModalText"
+              class="message-modal__textarea"
+              placeholder="Type your message…"></textarea>
+
+    <div class="message-modal__footer">
+      <button type="button" class="message-modal__send" id="messageModalSend">
+        Send
+      </button>
+    </div>
+  </div>
+</div>
   </body>
 </html>
