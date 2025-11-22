@@ -210,3 +210,21 @@ body {
   display: block;
   background: #eee;
 }
+
+/* Footer */
+
+.footer {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--muted);
+} 
+
+
+
