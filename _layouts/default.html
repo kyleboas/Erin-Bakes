@@ -21,53 +21,8 @@
 
   <body>
     <main class="page">
-      <section class="top">
-        <!-- LEFT -->
-        <div class="left">
-          <div class="profile">
-             <div class="avatar">
-                <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" />
-                <img src="https://raw.githubusercontent.com/kyleboas/Erin-Bakes/refs/heads/main/_assets/IMG_0849.png" alt="Erin profile photo" /></a>
-              </div>
-
-              <div class="profile-text">
-                <h1 class="name name-swap">
-                Erin
-                <span class="last-wrap" aria-live="polite">
-                  <span class="last last-boas">Boas</span>
-                  <span class="last last-bakes accent">Bakes</span>
-                  <span class="last last-travels accent">Travels</span>
-                  <span class="last last-cooks accent">Cooks</span>
-                  <span class="last last-reads accent">Reads</span>
-                </span>
-              </h1>
-                <div class="location">WASHINGTON, DC</div>
-              </div>
-            </div>
-
-          <p class="blurb">
-          Baking homemade cakes and treats for events. Contact me if you want me to make you something for your next special occasion.
-          </p>
-        </div>
-
-        <!-- RIGHT -->
-        <form class="contact" action="#" method="post">
-          <div class="field">
-            <label class="label" for="fullName">Full Name</label>
-            <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" />
-          </div>
-
-          <div class="field">
-            <label class="label" for="email">Email Address</label>
-            <input class="input" id="email" name="email" type="email" autocomplete="email" />
-          </div>
-
-          <div class="field">
-            <label class="label" for="dateVenue">Date &amp; Venue</label>
-            <input class="input" id="dateVenue" name="dateVenue" type="text" />
-          </div>
-        </form>
-      </section>
+     
+      {% include top.html %}
       
       
       <div class="subscribe">
