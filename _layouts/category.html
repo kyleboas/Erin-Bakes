@@ -3,10 +3,12 @@ layout: default
 ---
 
 <section class="gallery" aria-label="{% if page.category %}{{ page.category | capitalize }}{% else %}All{% endif %}">
-  {% assign cat = page.category | downcase %}
+  {% assign cat = page.category | default: "" | downcase %}
 
   {% for post in site.posts %}
-    {% if cat == "" or cat == nil or cat == "all" or post.categories contains cat %}
+    {% assign post_cats = post.categories | join: " " | downcase %}
+
+    {% if cat == "" or cat == "all" or post_cats contains cat %}
       {% if post.image %}
         <div class="post-link">
           <a href="{{ post.url | relative_url }}">
