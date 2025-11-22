@@ -52,14 +52,10 @@ body {
 
 /* LEFT COLUMN */
 .profile {
-  display: grid;
-  grid-template-columns: 60px 1fr;
   grid-template-rows: auto auto;
-  align-items: center;
 }
 
 .avatar {
-  grid-row: 1 / span 2;
   width: 60px;
   aspect-ratio: 1 / 1;
   border-radius: 999px;
@@ -84,6 +80,7 @@ body {
   font-weight: 400;
   white-space: nowrap;
   margin: 0;
+  padding-bottom: 5px;
 }
 
 .name .accent {
