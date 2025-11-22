@@ -186,6 +186,42 @@ body {
   color: #fff;
 }
 
+/* NAV */
+
+.nav {
+  font-family: "Playfair Display", Georgia, serif;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 10px;
+}
+
+.bakes {
+  color: var(--accent);
+}
+
+.travels {
+  color: var(--accent);
+}
+
+.cooks {
+  color: var(--accent);
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.nav .sep {
+  opacity: 0.5;
+  user-select: none;
+}
+
 /* Post Content */
 
 
