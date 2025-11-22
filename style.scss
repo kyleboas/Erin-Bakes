@@ -116,8 +116,7 @@ body {
 .name-swap .last-wrap {
   position: relative;
   display: inline-block;
-  line-height: 1.15;   /* more breathing room */
-  height: 0.85em;      /* taller so italics don't clip */
+  height: 0.85em;
   min-width: 4.5ch;
   vertical-align: baseline;
   padding-top: 0.05em; /* nudges the stack down a hair */
