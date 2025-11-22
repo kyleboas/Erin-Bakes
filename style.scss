@@ -161,24 +161,6 @@ body {
   animation-name: reads-cycle;
 }
 
-/* one-shot intro for solo pages */
-@keyframes solo-last-in {
-  0%   { opacity: 0; transform: translateY(-140%); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* SOLO pages: kill cycling and play just once */
-.name-swap.solo-bakes .last-bakes,
-.name-swap.solo-travels .last-travels,
-.name-swap.solo-cooks .last-cooks,
-.name-swap.solo-reads .last-reads {
-  animation-name: solo-last-in;
-  animation-duration: 600ms;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-
 /* Each word is visible for a slice of the 0–100% timeline */
 @keyframes boas-cycle {
   0%        { opacity: 0; transform: translateY(-140%); }
@@ -217,6 +199,24 @@ body {
   87.96%      { opacity: 1; transform: translateY(0); }
   96.36%      { opacity: 1; transform: translateY(0); }
   100%        { opacity: 0; transform: translateY(35%); } /* blends into Boas */
+}
+
+/* one-shot intro for solo pages */
+@keyframes solo-last-in {
+  0%   { opacity: 0; transform: translateY(-140%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* SOLO pages: kill cycling and play just once */
+.name-swap.solo-bakes .last-bakes,
+.name-swap.solo-travels .last-travels,
+.name-swap.solo-cooks .last-cooks,
+.name-swap.solo-reads .last-reads {
+  animation-name: solo-last-in;
+  animation-duration: 600ms;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
 .location {
