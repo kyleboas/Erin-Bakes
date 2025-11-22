@@ -1,0 +1,93 @@
+<section class="top">
+  <!-- LEFT -->
+  <div class="left">
+    <div class="profile">
+      <div class="avatar">
+        <a href="{{ site.baseurl }}/" class="site-avatar">
+          <img src="{{ site.avatar }}" />
+          <img src="https://raw.githubusercontent.com/kyleboas/Erin-Bakes/refs/heads/main/_assets/IMG_0849.png"
+               alt="Erin profile photo" />
+        </a>
+      </div>
+
+      <div class="profile-text">
+        <h1 class="name name-swap">
+          Erin
+          <span class="last-wrap" aria-live="polite">
+            <span class="last last-boas">Boas</span>
+
+            {% if page.category == "bakes" %}
+              <span class="last accent">Bakes</span>
+            {% elsif page.category == "travels" %}
+              <span class="last accent">Travels</span>
+            {% elsif page.category == "cooks" %}
+              <span class="last accent">Cooks</span>
+            {% elsif page.category == "reads" %}
+              <span class="last accent">Reads</span>
+            {% else %}
+              <!-- All page -->
+              <span class="last accent">Bakes</span>
+              <span class="last accent">Travels</span>
+              <span class="last accent">Cooks</span>
+              <span class="last accent">Reads</span>
+            {% endif %}
+          </span>
+        </h1>
+
+        <div class="location">WASHINGTON, DC</div>
+      </div>
+    </div>
+
+    <p class="blurb">
+      {% if page.category == "bakes" %}
+        Baking homemade cakes and treats for events. Contact me if you want me to make you something for your next special occasion.
+      {% elsif page.category == "travels" %}
+        Traveling around the world.
+      {% elsif page.category == "cooks" %}
+        Cooking meals, testing recipes, and feeding people I love.
+      {% elsif page.category == "reads" %}
+        What I’m reading and what I’m learning.
+      {% else %}
+        Associate at Spencer Stuart, discovering and developing leadership for a better future within the Education and Social Impact practice in Washington, D.C.
+      {% endif %}
+    </p>
+  </div>
+
+  <!-- RIGHT -->
+  {% if page.category == "travels" %}
+    <form class="contact" action="#" method="post">
+      <div class="field">
+        <label class="label" for="fullName">Full Name</label>
+        <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label class="label" for="email">Email Address</label>
+        <input class="input" id="email" name="email" type="email" autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label class="label" for="travelRecomend">Where should I go?</label>
+        <input class="input" id="travelRecomend" name="travelRecomend" type="text" />
+      </div>
+    </form>
+
+  {% else %}
+    <form class="contact" action="#" method="post">
+      <div class="field">
+        <label class="label" for="fullName">Full Name</label>
+        <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label class="label" for="email">Email Address</label>
+        <input class="input" id="email" name="email" type="email" autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label class="label" for="dateVenue">Date &amp; Venue</label>
+        <input class="input" id="dateVenue" name="dateVenue" type="text" />
+      </div>
+    </form>
+  {% endif %}
+</section>
