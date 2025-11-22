@@ -4,9 +4,11 @@ layout: default
 
 <article class="post">
   <img class="cake-shot" src="{{ page.image }}" alt="{{ page.title }}" />
-  <h1 class="post-title">{{ page.title }}</h1>
-  <p class="post-date">{{ page.date | date: "%d %B %Y" }}</p>
-  <div class="entry">
-   {{ content }}
+  <div class="post-content">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-date">{{ page.date | date: "%d %B %Y" }}</p>
+    <div class="entry">
+     {{ content }}
+    </div>
   </div>
 </article>
