@@ -227,13 +227,19 @@ h1 {
   background: #eee;
 }
 
-/* Scroll-reveal base state */
+/* Visible by default (prevents flash if JS/CSS load order is weird) */
 .cake-shot {
-  opacity: 0;
-  transform: translateY(8px);
+  opacity: 1;
+  transform: none;
   transition: opacity 1.6s cubic-bezier(.22,.61,.36,1),
               transform 1.6s cubic-bezier(.22,.61,.36,1);
   will-change: opacity, transform;
+}
+
+/* Once JS is ready, start them hidden until revealed */
+.reveal-ready .cake-shot {
+  opacity: 0;
+  transform: translateY(8px);
 }
 
 /* When revealed */
@@ -244,7 +250,8 @@ h1 {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .cake-shot {
+  .cake-shot,
+  .reveal-ready .cake-shot {
     opacity: 1;
     transform: none;
     transition: none;
