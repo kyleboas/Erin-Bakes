@@ -257,18 +257,6 @@ h1 {
   }
 }
 
-/* Hide only gallery images once JS is ready */
-.reveal-ready .gallery .cake-shot {
-  opacity: 0;
-  transform: translateY(8px);
-}
-
-/* …except the first cake-shot */
-.reveal-ready .gallery .post-link:first-child .cake-shot {
-  opacity: 1;
-  transform: none;
-}
-
 /* Footer */
 
 .footer {
