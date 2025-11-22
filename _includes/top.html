@@ -65,8 +65,8 @@
       </div>
 
       <div class="field">
-        <label class="label" for="travelRecomend">Location</label>
-        <input class="input" id="travelRecomend" name="travelRecomend" type="text" />
+        <label class="label" for="message">Location</label>
+        <input class="input" id="message" name="message" type="text" />
       </div>
     </form>
 
@@ -83,8 +83,8 @@
       </div>
 
       <div class="field">
-        <label class="label" for="bookRec">Book</label>
-        <input class="input" id="bookRec" name="bookRec" type="text" />
+        <label class="label" for="message">Book</label>
+        <input class="input" id="message" name="message" type="text" />
       </div>
     </form>
 
@@ -103,11 +103,11 @@
 
       <div class="field">
         {% if page.category == "bakes" %}
-          <label class="label" for="dateVenue">Date &amp; Venue</label>
-          <input class="input" id="dateVenue" name="dateVenue" type="text" />
+          <label class="label" for="message">Date &amp; Venue</label>
+          <input class="input" id="message" name="message" type="text" />
         {% elsif page.category == "cooks" %}
-           <label class="label" for="recipe">Recipe</label>
-          <input class="input" id="recipe" name="recipe" type="text" />
+           <label class="label" for="message">Recipe</label>
+          <input class="input" id="message" name="message" type="text" />
         {% else %}
           <label class="label" for="message">Message</label>
           <input class="input" id="message" name="message" type="text" />
