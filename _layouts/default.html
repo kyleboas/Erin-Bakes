@@ -139,12 +139,9 @@ document.addEventListener("DOMContentLoaded", () => {
     openModal();
   });
 
-  // Close buttons / backdrop
-  closeEls.forEach(el => el.addEventListener("click", closeModal));
-
-  // Esc closes
-  document.addEventListener("keydown", (e) => {
-    if (modal.classList.contains("is-open") && e.key === "Escape") {
+  // Close on X or backdrop (delegated)
+  modal.addEventListener("click", (e) => {
+    if (e.target.closest("[data-close]")) {
       closeModal();
     }
   });
@@ -173,9 +170,12 @@ document.addEventListener("DOMContentLoaded", () => {
        aria-labelledby="messageModalTitle">
     <div class="message-modal__header">
       <h2 id="messageModalTitle" class="message-modal__title">Message</h2>
-      <button type="button" class="message-modal__close" aria-label="Close" data-close>
-        ✕
-      </button>
+      <button type="button"
+        class="message-modal__close"
+        aria-label="Close"
+        data-close>
+      ✕
+    </button>
     </div>
 
     <textarea id="messageModalText"
