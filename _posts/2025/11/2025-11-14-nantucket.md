@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-11-21 11:00 UTC
+date: 2025-11-14 11:00 UTC
 title: "Nantucket"
 categories:
 - "Travel"
