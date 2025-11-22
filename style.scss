@@ -649,7 +649,7 @@ h1 {
     grid-row: 1;                                /* stays in the top row */
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 0px;
     position: sticky;
     top: 24px;
     min-width: 0;
