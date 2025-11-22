@@ -224,6 +224,32 @@ h1 {
   background: #eee;
 }
 
+/* Fade-in animation for gallery images */
+.cake-shot{
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.post-link:nth-child(1) .cake-shot { animation-delay: 0.05s; }
+.post-link:nth-child(2) .cake-shot { animation-delay: 0.15s; }
+.post-link:nth-child(3) .cake-shot { animation-delay: 0.25s; }
+.post-link:nth-child(4) .cake-shot { animation-delay: 0.35s; }
+.post-link:nth-child(5) .cake-shot { animation-delay: 0.45s; }
+
+@keyframes fadeIn{
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .cake-shot{
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Footer */
 
 .footer {
