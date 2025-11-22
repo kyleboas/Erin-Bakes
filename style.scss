@@ -194,17 +194,20 @@ body {
   gap: 8px;
   align-items: center;
   font-size: 10px;
+  justify-content: center; 
+  width: 100%;
+  font-style: italic;
 }
 
-.bakes {
+bakes {
   color: var(--accent);
 }
 
-.travels {
+travels {
   color: var(--accent);
 }
 
-.cooks {
+cooks {
   color: var(--accent);
 }
 
