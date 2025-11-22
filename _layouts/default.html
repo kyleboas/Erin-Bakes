@@ -58,9 +58,18 @@
       </section>
 
       <section class="gallery" aria-label="Work">
-        <img class="cake-shot"
-             src="https://raw.githubusercontent.com/kyleboas/Erin-Bakes/refs/heads/main/uploads/2025/11/IMG_0859.jpeg"
-             alt="Cake example" />
+        {% if page.layout == 'post' and page.image %}
+          <img class="cake-shot" src="{{ page.image }}" alt="{{ page.title }}" />
+        {% elsif page.layout == 'default' %}
+          {% assign latest_post = site.posts.first %}
+          {% if latest_post.image %}
+            <img class="cake-shot" src="{{ latest_post.image }}" alt="{{ latest_post.title }}" />
+          {% else %}
+            <img class="cake-shot" src="{{ site.default_image }}" alt="Erin Bakes" />
+          {% endif %}
+        {% else %}
+          <img class="cake-shot" src="{{ site.default_image }}" alt="Erin Bakes" />
+        {% endif %}
       </section>
     </main>
   </body>
