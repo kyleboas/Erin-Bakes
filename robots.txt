@@ -1,6 +1,5 @@
-# Tactics Journal - robots.txt
-# Football tactics analysis by Kyle Boas
-# Updated: 2025-11-19
+# Erin Boas - robots.txt
+# Updated: 2025-11-22
 
 # Default crawl rules for all bots
 User-agent: *
