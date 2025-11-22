@@ -630,7 +630,7 @@ h1 {
   color: var(--muted);
 }
 
-/* === Sidebar layout above 760px (uses .sidebar + .main + footer) === */
+/* === Sidebar layout above 760px (ordered: profile, blurb, subscribe, nav, contact) === */
 @media (min-width: 760px) {
   .page {
     display: grid;
@@ -653,6 +653,18 @@ h1 {
     min-width: 0;
   }
 
+  /* Make .top disappear as a flex item wrapper so its kids can be ordered
+     alongside subscribe/nav inside the sidebar */
+  .top {
+    display: contents;
+  }
+
+  /* Order sidebar items */
+  .sidebar .left     { order: 1; width: 100%; min-width: 0; }
+  .sidebar .subscribe{ order: 3; }
+  .sidebar .nav      { order: 4; }
+  .sidebar .contact  { order: 5; width: 100%; min-width: 0; align-self: stretch; }
+
   /* Main content column */
   .main {
     grid-column: 2;
@@ -666,22 +678,6 @@ h1 {
     grid-row: 2;
     margin: 0;
     margin-top: 8px;
-  }
-
-  /* .top is inside sidebar now, so remove its page padding */
-  .top {
-    padding: 0;
-  }
-
-  /* kill the old two-col intent inside .top */
-  .top > .left,
-  .top > .contact {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .top > .contact {
-    align-self: stretch;
   }
 
   /* Let posts use the full main width */
