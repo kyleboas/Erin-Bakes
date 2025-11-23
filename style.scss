@@ -522,6 +522,12 @@ body.modal-open {
 
 /* Post Content */
 
+
+.post-link .no-image {
+  margin-left: 30px;
+  margin-right: 30px;
+} 
+
 .post-description {
   font-family: "Playfair Display", Georgia, serif;
   line-height: 1.5em;
@@ -549,11 +555,18 @@ h1 {
 .post-title {
   font-family: "Montserrat", "Futura PT", "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.15em;
+} 
+
+.post-title a {
   text-decoration: none;
   color: #000;
 } 
 
-.post-date {
+.post-title a:hover {
+  text-decoration: underline;
+}
+
+.post-date {      
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-size: 10px;
   margin-top: 5px;
