@@ -579,7 +579,14 @@ h1 {
 
 .entry {
   line-height: 1.5em;
-} 
+}
+
+.entry img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
 
 /* LOWER IMAGE SECTION */
 .gallery {
