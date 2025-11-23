@@ -53,52 +53,74 @@
 
   <!-- RIGHT -->
   {% if page.category == "travels" %}
-    <form class="contact" action="#" method="post">
+    <form class="contact"
+          action="https://formsubmit.co/kyle@tacticsjournal.com"
+          method="POST">
+      <input type="hidden" name="_subject" value="New Erin Boas site contact" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_template" value="table" />
+
       <div class="field">
         <label class="label" for="fullName">Full Name</label>
-        <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" />
+        <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" required />
       </div>
 
       <div class="field">
         <label class="label" for="email">Email Address</label>
-        <input class="input" id="email" name="email" type="email" autocomplete="email" />
+        <input class="input" id="email" name="email" type="email" autocomplete="email" required />
       </div>
 
       <div class="field">
         <label class="label" for="message">Location</label>
         <input class="input" id="message" name="message" type="text" />
       </div>
+
+      <button type="submit" class="contact-submit">Send</button>
     </form>
 
   {% elsif page.category == "reads" %}
-    <form class="contact" action="#" method="post">
+    <form class="contact"
+          action="https://formsubmit.co/kyle@tacticsjournal.com"
+          method="POST">
+      <input type="hidden" name="_subject" value="New Erin Boas site contact" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_template" value="table" />
+
       <div class="field">
         <label class="label" for="fullName">Full Name</label>
-        <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" />
+        <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" required />
       </div>
 
       <div class="field">
         <label class="label" for="email">Email Address</label>
-        <input class="input" id="email" name="email" type="email" autocomplete="email" />
+        <input class="input" id="email" name="email" type="email" autocomplete="email" required />
       </div>
 
       <div class="field">
         <label class="label" for="message">Book</label>
         <input class="input" id="message" name="message" type="text" />
       </div>
+
+      <button type="submit" class="contact-submit">Send</button>
     </form>
 
   {% else %}
     <!-- default / bakes / cooks / all -->
-    <form class="contact" action="#" method="post">
+    <form class="contact"
+          action="https://formsubmit.co/kyle@tacticsjournal.com"
+          method="POST">
+      <input type="hidden" name="_subject" value="New Erin Boas site contact" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_template" value="table" />
+
       <div class="field">
         <label class="label" for="fullName">Full Name</label>
-        <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" />
+        <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" required />
       </div>
 
       <div class="field">
         <label class="label" for="email">Email Address</label>
-        <input class="input" id="email" name="email" type="email" autocomplete="email" />
+        <input class="input" id="email" name="email" type="email" autocomplete="email" required />
       </div>
 
       <div class="field">
@@ -113,6 +135,8 @@
           <input class="input" id="message" name="message" type="text" />
         {% endif %}
       </div>
+
+      <button type="submit" class="contact-submit">Send</button>
     </form>
   {% endif %}
 </section>
