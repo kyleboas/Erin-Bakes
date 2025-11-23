@@ -643,7 +643,7 @@ h1 {
     min-height: 100vh;
   }
 
-  /* Sidebar column */
+    /* Sidebar column */
   .sidebar {
     grid-column: 1;
     grid-row: 1;
@@ -653,7 +653,13 @@ h1 {
     position: sticky;
     top: 24px;
     min-width: 0;
-    width: 100%; /* fill the 220px column */
+    width: 100%;
+
+    /* NEW: sidebar scrolls independently */
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    overscroll-behavior: contain;      /* prevents page scroll chaining */
   }
 
   .top { display: contents; }
@@ -669,8 +675,13 @@ h1 {
     grid-row: 1 / span 3;
     min-width: 0;
   }
+  
+  .blurb {
+    margin-bottom: 0px;
+  } 
 
-  .subscribe .form-container { justify-content: left; }
+  .subscribe .form-container { 
+    justify-content: left; }
 
   .nav {
     padding-bottom: 20px;
@@ -684,8 +695,6 @@ h1 {
     margin: 0;
     align-self: end;
   }
-
-  #message { height: 100px; }
 
   .post-content {
     padding: 20px 0 120px;
@@ -707,3 +716,13 @@ h1 {
     /* or shorthand: gap: 30px 20px; */
   }
 }
+
+@media (min-width: 890px) {
+
+   #message { 
+     height: 100px; 
+   }
+}
+
+
+
