@@ -522,6 +522,10 @@ body.modal-open {
 
 /* Post Content */
 
+.post-description {
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.5em;
+}
 
 .post-link {
   padding-bottom: 60px;
@@ -545,6 +549,8 @@ h1 {
 .post-title {
   font-family: "Montserrat", "Futura PT", "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.15em;
+  text-decoration: none;
+  color: #000;
 } 
 
 .post-date {
