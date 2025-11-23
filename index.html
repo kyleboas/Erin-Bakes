@@ -4,14 +4,34 @@ layout: default
 
 <section class="gallery" aria-label="Work">
   {% for post in site.posts %}
+
     {% if post.image %}
-    <div class="post-link">
-      <a href="{{ post.url | relative_url }}">
-        <img class="cake-shot"
-             src="{{ post.image | relative_url }}"
-             alt="{{ post.title }}">
-      </a>
-    </div> 
+      <!-- Image card -->
+      <div class="post-link has-image">
+        <a href="{{ post.url | relative_url }}">
+          <img class="cake-shot"
+               src="{{ post.image | relative_url }}"
+               alt="{{ post.title }}">
+        </a>
+      </div>
+
+    {% else %}
+      <!-- Text fallback card -->
+      <article class="post-link no-image">
+        <h1 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h1>
+
+        <p class="post-date">
+          {{ post.date | date: "%d %B %Y" }}
+        </p>
+
+        <div class="post-description">
+          {{ post.excerpt | strip_html | strip_newlines | truncatewords: 40 }}
+          <a href="{{ post.url | relative_url }}">Read more...</a>
+        </div>
+      </article>
     {% endif %}
+
   {% endfor %}
 </section>
