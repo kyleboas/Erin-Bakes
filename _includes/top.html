@@ -20,14 +20,14 @@
               <span class="last last-travels accent">Travels</span>
             {% elsif page.category == "cooks" %}
               <span class="last last-cooks accent">Cooks</span>
-            {% elsif page.category == "reads" %}
-              <span class="last last-reads accent">Reads</span>
+            {% elsif page.category == "writes" %}
+              <span class="last last-writes accent">Writes</span>
             {% else %}
               <span class="last last-boas">Boas</span>
               <span class="last last-bakes accent">Bakes</span>
               <span class="last last-travels accent">Travels</span>
               <span class="last last-cooks accent">Cooks</span>
-              <span class="last last-reads accent">Reads</span>
+              <span class="last last-writes accent">Writes</span>
             {% endif %}
           </span>
         </h1>
@@ -43,7 +43,7 @@
         Favorite place to escape to: Nantucket--salt air, slow afternoons, and that perfect mix of charming and laid-back.
       {% elsif page.category == "cooks" %}
         Cooking is how I unwind. I’m always testing recipes, tweaking flavors, and trying to make everyday meals feel a little special.
-      {% elsif page.category == "reads" %}
+      {% elsif page.category == "writes" %}
         Reading to learn, escape, and sharpen ideas--fiction, non-fiction, anything beautifully written. Always open to recomendations.
       {% else %}
         Associate at Spencer Stuart, discovering and developing leadership for a better future within the Education and Social Impact practice.
@@ -80,9 +80,6 @@
           <input class="input" id="message" name="message" type="text" />
         {% elsif page.category == "cooks" %}
            <label class="label" for="message">Recipe</label>
-          <input class="input" id="message" name="message" type="text" />
-        {% elsif page.category == "reads" %}
-           <label class="label" for="message">Book</label>
           <input class="input" id="message" name="message" type="text" />
         {% else %}
           <label class="label" for="message">Message</label>

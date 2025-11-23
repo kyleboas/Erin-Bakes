@@ -156,9 +156,9 @@ body {
   animation-name: cooks-cycle;
 }
 
-/* READS */
-.name-swap .last-reads {
-  animation-name: reads-cycle;
+/* WRITES */
+.name-swap .last-writes {
+  animation-name: writes-cycle;
 }
 
 /* Each word is visible for a slice of the 0–100% timeline */
@@ -194,7 +194,7 @@ body {
   100%        { opacity: 0; transform: translateY(35%); }
 }
 
-@keyframes reads-cycle {
+@keyframes writes-cycle {
   0%, 84.32%  { opacity: 0; transform: translateY(-140%); }
   87.96%      { opacity: 1; transform: translateY(0); }
   96.36%      { opacity: 1; transform: translateY(0); }
@@ -211,7 +211,7 @@ body {
 .name-swap.solo-bakes .last-bakes,
 .name-swap.solo-travels .last-travels,
 .name-swap.solo-cooks .last-cooks,
-.name-swap.solo-reads .last-reads {
+.name-swap.solo-writes .last-writes {
   animation-name: solo-last-in;
   animation-duration: 600ms;
   animation-timing-function: ease;
@@ -723,6 +723,3 @@ h1 {
      height: 100px; 
    }
 }
-
-
-
