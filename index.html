@@ -8,7 +8,7 @@ layout: default
     {% if post.image %}
       <!-- Image card -->
       <div class="post-link has-image">
-        <a href="{{ post.url | relative_url }}">
+        <a href="{{ post.url }}">
           <img class="cake-shot"
                src="{{ post.image | relative_url }}"
                alt="{{ post.title }}">
@@ -19,7 +19,7 @@ layout: default
       <!-- Text fallback card -->
       <article class="post-link no-image">
         <h1 class="post-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a href="{{ post.url }}">{{ post.title }}</a>
         </h1>
 
         <p class="post-date">
